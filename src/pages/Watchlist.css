@@ -1,0 +1,64 @@
+/* ============================================
+   WATCHLIST PAGE
+============================================ */
+
+.watchlist-page {
+  min-height: 100vh;
+  padding: 20px 4% 60px;
+}
+
+.watchlist-page__header {
+  margin-bottom: 32px;
+}
+
+.watchlist-page__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.watchlist-page__count {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Controls */
+.watchlist-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.watchlist-clear-btn {
+  background: transparent;
+  border: 1px solid rgba(229, 9, 20, 0.5);
+  color: var(--netflix-red);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.watchlist-clear-btn:hover {
+  background: var(--netflix-red);
+  color: #fff;
+}
+
+/* Grid */
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .watchlist-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+  }
+}

@@ -1,0 +1,120 @@
+/* ============================================
+   GENRE PAGE
+============================================ */
+
+.genre-page {
+  min-height: 100vh;
+  padding: 20px 4% 60px;
+}
+
+.genre-page__header {
+  margin-bottom: 32px;
+}
+
+.genre-page__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.genre-page__title span {
+  color: var(--netflix-red);
+}
+
+/* Genre Filter Tabs */
+.genre-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.genre-filter__btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.genre-filter__btn:hover {
+  border-color: var(--netflix-red);
+  color: var(--text-primary);
+}
+
+.genre-filter__btn--active {
+  background: var(--netflix-red);
+  border-color: var(--netflix-red);
+  color: #fff;
+}
+
+/* Sort */
+.genre-sort {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.genre-sort label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.genre-sort select {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  outline: none;
+}
+
+/* Grid */
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+/* Loading More */
+.load-more-indicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  gap: 12px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.load-more-indicator .spinner {
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: var(--netflix-red);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.end-of-results {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .genre-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 12px;
+  }
+}

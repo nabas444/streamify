@@ -1,0 +1,197 @@
+/* ============================================
+   MOVIE CARD
+============================================ */
+
+.movie-card {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: var(--bg-card);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  will-change: transform;
+}
+
+.movie-card:hover {
+  transform: scale(1.07);
+  box-shadow: var(--shadow-heavy);
+  z-index: 10;
+}
+
+.movie-card:hover .movie-card__overlay {
+  opacity: 1;
+}
+
+.movie-card:hover .movie-card__info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Poster Image */
+.movie-card__poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+}
+
+.movie-card__poster-placeholder {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: var(--bg-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--text-muted);
+}
+
+/* Overlay */
+.movie-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 30%,
+    rgba(0, 0, 0, 0.7) 65%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+/* Info on Hover */
+.movie-card__info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 10px 10px;
+  transform: translateY(8px);
+  opacity: 0;
+  transition: transform var(--transition-normal), opacity var(--transition-normal);
+}
+
+.movie-card__title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.movie-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.movie-card__year {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.movie-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.72rem;
+  color: #ffd700;
+  font-weight: 600;
+}
+
+/* Action Buttons on Hover */
+.movie-card__actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.movie-card__btn {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background var(--transition-fast);
+}
+
+.movie-card__btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.movie-card__btn--watchlist {
+  background: var(--netflix-red);
+  border-color: var(--netflix-red);
+}
+
+.movie-card__btn--watchlist:hover {
+  background: var(--netflix-red-hover);
+}
+
+.movie-card__btn--watchlist.in-list {
+  background: rgba(229, 9, 20, 0.3);
+  border-color: var(--netflix-red);
+}
+
+/* Large card variant */
+.movie-card--large {
+  min-width: 200px;
+  max-width: 200px;
+}
+
+.movie-card--medium {
+  min-width: 160px;
+  max-width: 160px;
+}
+
+.movie-card--small {
+  min-width: 130px;
+  max-width: 130px;
+}
+
+/* Grid variant */
+.movie-card--grid {
+  min-width: unset;
+  max-width: unset;
+  width: 100%;
+}
+
+/* Skeleton */
+.movie-card--skeleton {
+  pointer-events: none;
+}
+
+.skeleton-poster {
+  width: 100%;
+  aspect-ratio: 2/3;
+  background: linear-gradient(
+    90deg,
+    #1f1f1f 0%,
+    #2a2a2a 50%,
+    #1f1f1f 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@media (max-width: 600px) {
+  .movie-card--large {
+    min-width: 140px;
+    max-width: 140px;
+  }
+  .movie-card--medium {
+    min-width: 120px;
+    max-width: 120px;
+  }
+}

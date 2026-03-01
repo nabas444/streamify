@@ -1,0 +1,103 @@
+/* ============================================
+   TRAILER MODAL
+============================================ */
+
+.trailer-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.trailer-modal {
+  width: 100%;
+  max-width: 900px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.9);
+  position: relative;
+  animation: fadeInUp 0.3s ease;
+}
+
+.trailer-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: rgba(20, 20, 20, 0.95);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.trailer-modal__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.trailer-modal__close {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--transition-fast);
+}
+
+.trailer-modal__close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.trailer-modal__player {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #000;
+}
+
+.trailer-modal__iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.trailer-modal__no-trailer {
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  background: #111;
+}
+
+.trailer-modal__no-trailer span {
+  font-size: 3rem;
+}
+
+@media (max-width: 640px) {
+  .trailer-modal-backdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+  .trailer-modal {
+    border-radius: 12px 12px 0 0;
+  }
+}

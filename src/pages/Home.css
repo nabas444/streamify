@@ -1,0 +1,13 @@
+/* ============================================
+   HOME PAGE
+============================================ */
+
+.home {
+  min-height: 100vh;
+  background: var(--bg-primary);
+}
+
+.home__rows {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
