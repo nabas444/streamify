@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { MovieProvider } from './context/MovieContext';
 import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Footer from './components/footer/Footer.jsx';
 import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 import './styles/global.css';
 
@@ -72,4 +72,3 @@ const App = () => (
 );
 
 export default App;
-
