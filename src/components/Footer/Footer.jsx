@@ -13,44 +13,49 @@ const Footer = () => {
               Cine<span>Stream</span>
             </div>
             <p className="footer__brand-desc">
-              Your cinematic universe. Discover trending movies, explore genres,
-              watch trailers, and build your personal watchlist.
+              A premium movie discovery experience with curated collections, real-time trends,
+              and your personal watchlist in one place.
             </p>
+            <div className="footer__status">
+              <span className="footer__status-dot" />
+              Live catalog updates daily
+            </div>
           </div>
 
           <div>
-            <p className="footer__col-title">Navigate</p>
+            <p className="footer__col-title">Platform</p>
             <div className="footer__links">
               <Link to="/" className="footer__link">Home</Link>
               <Link to="/search" className="footer__link">Search</Link>
               <Link to="/watchlist" className="footer__link">Watchlist</Link>
+              <Link to="/genre/trending" className="footer__link">Trending</Link>
             </div>
           </div>
 
           <div>
-            <p className="footer__col-title">Genres</p>
+            <p className="footer__col-title">Categories</p>
             <div className="footer__links">
               <Link to="/genre/28" className="footer__link">Action</Link>
               <Link to="/genre/35" className="footer__link">Comedy</Link>
               <Link to="/genre/27" className="footer__link">Horror</Link>
-              <Link to="/genre/10749" className="footer__link">Romance</Link>
-              <Link to="/genre/16" className="footer__link">Animation</Link>
+              <Link to="/genre/878" className="footer__link">Sci-Fi</Link>
+              <Link to="/genre/53" className="footer__link">Thriller</Link>
             </div>
           </div>
 
           <div>
-            <p className="footer__col-title">Info</p>
+            <p className="footer__col-title">Data</p>
             <div className="footer__links">
-              <span className="footer__link">Data by TMDB</span>
-              <span className="footer__link">Trailers via YouTube</span>
-              <span className="footer__link">React App</span>
+              <span className="footer__link">TMDB movie metadata</span>
+              <span className="footer__link">YouTube trailer embeds</span>
+              <span className="footer__link">Responsive React interface</span>
             </div>
           </div>
         </div>
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © {year} CineStream. Built with ❤️ for movie lovers.
+            Copyright {year} CineStream. All rights reserved.
           </p>
           <p className="footer__api-credit">
             Movie data provided by{' '}

@@ -23,7 +23,7 @@
   --text-secondary: #b3b3b3;
   --text-muted: #6e6e6e;
   --border-color: #2a2a2a;
-  --navbar-height: 68px;
+  --navbar-height: 116px;
   --border-radius: 6px;
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.6);
   --shadow-heavy: 0 8px 40px rgba(0, 0, 0, 0.8);
@@ -264,6 +264,10 @@ ul, ol {
 
 /* Responsive */
 @media (max-width: 768px) {
+  :root {
+    --navbar-height: 74px;
+  }
+
   .section-title {
     font-size: 1.1rem;
   }

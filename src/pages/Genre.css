@@ -4,88 +4,74 @@
 
 .genre-page {
   min-height: 100vh;
-  padding: 20px 4% 60px;
+  padding: 22px 4% 70px;
 }
 
 .genre-page__header {
-  margin-bottom: 32px;
+  margin-bottom: 26px;
+  padding: 18px 0 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.genre-page__eyebrow {
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 8px;
 }
 
 .genre-page__title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 8px;
+  font-size: clamp(1.5rem, 2.1vw, 2.15rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .genre-page__title span {
   color: var(--netflix-red);
 }
 
-/* Genre Filter Tabs */
 .genre-filter {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 32px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid var(--border-color);
+  gap: 10px;
+  margin-bottom: 34px;
 }
 
 .genre-filter__btn {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: var(--text-secondary);
-  font-size: 0.85rem;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding: 9px 14px;
+  border-radius: 999px;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
 
 .genre-filter__btn:hover {
-  border-color: var(--netflix-red);
+  border-color: rgba(229, 9, 20, 0.45);
   color: var(--text-primary);
+  background: rgba(229, 9, 20, 0.15);
 }
 
 .genre-filter__btn--active {
-  background: var(--netflix-red);
-  border-color: var(--netflix-red);
+  background: linear-gradient(125deg, rgba(229, 9, 20, 0.9), rgba(184, 29, 36, 0.95));
+  border-color: transparent;
   color: #fff;
+  box-shadow: 0 12px 24px rgba(229, 9, 20, 0.25);
 }
 
-/* Sort */
-.genre-sort {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-
-.genre-sort label {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-}
-
-.genre-sort select {
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-  font-size: 0.85rem;
-  padding: 6px 12px;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  outline: none;
-}
-
-/* Grid */
 .genre-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 16px;
 }
 
-/* Loading More */
 .load-more-indicator {
   display: flex;
   justify-content: center;
@@ -107,9 +93,25 @@
 
 .end-of-results {
   text-align: center;
-  padding: 40px 0;
+  padding: 42px 0 26px;
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.86rem;
+}
+
+.empty-state .empty-icon {
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: radial-gradient(circle at 30% 20%, rgba(229, 9, 20, 0.2), rgba(255, 255, 255, 0.02));
 }
 
 @media (max-width: 600px) {

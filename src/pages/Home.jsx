@@ -30,47 +30,47 @@ const Home = () => {
 
   const rows = [
     {
-      title: '🔥 Trending Now',
+      title: 'Trending Now',
       data: trending,
       seeAll: '/genre/trending',
     },
     {
-      title: '🎬 Now Playing',
+      title: 'Now Playing',
       data: nowPlaying,
       seeAll: '/genre/now_playing',
     },
     {
-      title: '⭐ Top Rated',
+      title: 'Top Rated',
       data: topRated,
       seeAll: '/genre/top_rated',
     },
     {
-      title: '🌟 Popular',
+      title: 'Popular',
       data: popular,
       seeAll: '/genre/popular',
     },
     {
-      title: '💥 Action',
+      title: 'Action',
       data: action,
       seeAll: '/genre/28',
     },
     {
-      title: '😂 Comedy',
+      title: 'Comedy',
       data: comedy,
       seeAll: '/genre/35',
     },
     {
-      title: '😱 Horror',
+      title: 'Horror',
       data: horror,
       seeAll: '/genre/27',
     },
     {
-      title: '❤️ Romance',
+      title: 'Romance',
       data: romance,
       seeAll: '/genre/10749',
     },
     {
-      title: '🌀 Animation',
+      title: 'Animation',
       data: animation,
       seeAll: '/genre/16',
     },

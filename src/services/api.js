@@ -1,7 +1,13 @@
 import axios from 'axios';
 
-const TMDB_API_KEY = 'ed29df6f7a00b386b0b43f63739837b0';
+const TMDB_API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const BASE_URL = 'https://api.themoviedb.org/3';
+
+if (!TMDB_API_KEY) {
+  console.warn(
+    'Missing VITE_TMDB_API_KEY. Add it to your .env file and deployment environment variables.'
+  );
+}
 
 export const IMAGE_BASE_URL = 'https://image.tmdb.org/t/p';
 export const BACKDROP_SIZE = '/original';
